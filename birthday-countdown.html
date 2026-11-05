@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Coming Soon 🎂❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, #ffd1e2 0%, transparent 35%),
+        radial-gradient(circle at 80% 80%, #d9c2ff 0%, transparent 35%),
+        linear-gradient(135deg, #fff0f6, #f8eaff, #ffe5ef);
+}
+
+/* FLOATING DECORATIONS */
+.decoration { position: fixed; pointer-events: none; z-index: 1; animation: floatDecoration 5s ease-in-out infinite; }
+.balloon { font-size: 65px; }
+.heart { font-size: 35px; }
+.star { font-size: 25px; }
+
+.balloon1 { left: 5%; top: 12%; }
+.balloon2 { right: 7%; top: 15%; animation-delay: 1s; }
+.balloon3 { left: 10%; bottom: 10%; animation-delay: 2s; }
+.balloon4 { right: 10%; bottom: 12%; animation-delay: 1.5s; }
+.heart1 { left: 20%; top: 8%; animation-delay: .5s; }
+.heart2 { right: 20%; top: 8%; animation-delay: 2s; }
+.heart3 { left: 25%; bottom: 10%; animation-delay: 1s; }
+.heart4 { right: 25%; bottom: 8%; animation-delay: 2.5s; }
+.star1 { left: 15%; top: 40%; }
+.star2 { right: 15%; top: 45%; animation-delay: 1s; }
+.star3 { left: 8%; top: 65%; animation-delay: 2s; }
+.star4 { right: 8%; top: 65%; animation-delay: 1.5s; }
+
+@keyframes floatDecoration {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* MAIN CARD */
+.birthday-card {
+    position: relative;
+    z-index: 5;
+    width: min(850px, 92%);
+    padding: 45px 30px;
+    text-align: center;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, .72);
+    border: 2px solid rgba(255, 255, 255, .8);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(190, 76, 130, .22);
+    animation: cardAppear 1s ease;
+}
+
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(30px) scale(.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* CAKE */
+.cake { font-size: 75px; margin-bottom: 5px; animation: cakeBounce 2s ease-in-out infinite; }
+@keyframes cakeBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* TITLE */
+.small-title { color: #c94b78; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 5px; }
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(55px, 9vw, 90px);
+    font-weight: 700;
+    line-height: 1;
+    color: #df4f7b;
+    text-shadow: 0 5px 15px rgba(223, 79, 123, .18);
+}
+.subtitle { margin-top: 15px; color: #9a526f; font-size: 15px; }
+
+/* COUNTDOWN */
+.countdown { display: flex; justify-content: center; gap: 15px; margin-top: 35px; flex-wrap: wrap; }
+.time-box {
+    width: 125px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffffff, #ffe8f0);
+    border: 1px solid rgba(222, 79, 123, .15);
+    box-shadow: 0 12px 30px rgba(214, 75, 120, .14);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.time-box:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 18px 40px rgba(214, 75, 120, .25); }
+.time-box span { font-size: 38px; font-weight: 600; color: #d94774; line-height: 1; }
+.time-box small { margin-top: 9px; font-size: 11px; color: #a25b78; letter-spacing: 2px; text-transform: uppercase; }
+
+/* MESSAGE */
+.message { margin-top: 30px; font-family: 'Dancing Script', cursive; font-size: 28px; color: #d94774; }
+.bottom-text { margin-top: 12px; color: #a25b78; font-size: 13px; }
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .birthday-card { padding: 35px 15px; }
+    .cake { font-size: 60px; }
+    .countdown { gap: 8px; }
+    .time-box { width: 78px; height: 85px; border-radius: 16px; }
+    .time-box span { font-size: 27px; }
+    .time-box small { font-size: 8px; letter-spacing: 1px; }
+    .message { font-size: 24px; }
+    .balloon { font-size: 42px; }
+    .heart { font-size: 25px; }
+    .star { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING DECORATIONS -->
+<div class="decoration balloon balloon1">🎈</div>
+<div class="decoration balloon balloon2">🎈</div>
+<div class="decoration balloon balloon3">🎈</div>
+<div class="decoration balloon balloon4">🎈</div>
+
+<div class="decoration heart heart1">❤️</div>
+<div class="decoration heart heart2">💗</div>
+<div class="decoration heart heart3">💕</div>
+<div class="decoration heart heart4">💖</div>
+
+<div class="decoration star star1">✨</div>
+<div class="decoration star star2">⭐</div>
+<div class="decoration star star3">✨</div>
+<div class="decoration star star4">🌟</div>
+
+<!-- BIRTHDAY CARD -->
+<div class="birthday-card">
+
+    <div class="cake">🎂</div>
+
+    <div class="small-title">A Special Day Is Coming</div>
+
+    <div class="title">Birthday Coming Soon</div>
+
+    <div class="subtitle">The countdown to your beautiful day has begun... ❤️</div>
+
+    <div class="countdown">
+        <div class="time-box"><span id="days">00</span><small>Days</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+
+    <div id="message" class="message">Counting every second until your birthday... 🎀</div>
+
+    <div class="bottom-text">6 November 🎂 ❤️</div>
+
+</div>
+
+<script>
+/* BIRTHDAY: 6 NOVEMBER */
+const BDAY_MONTH = 10; // 0 = January, so 10 = November
+const BDAY_DAY = 6;
+
+function isBirthdayToday() {
+    const now = new Date();
+    return now.getMonth() === BDAY_MONTH && now.getDate() === BDAY_DAY;
+}
+
+function getNextBirthday() {
+    const now = new Date();
+    let birthday = new Date(now.getFullYear(), BDAY_MONTH, BDAY_DAY, 0, 0, 0);
+    if (now >= birthday) {
+        birthday = new Date(now.getFullYear() + 1, BDAY_MONTH, BDAY_DAY, 0, 0, 0);
+    }
+    return birthday;
+}
+
+const el = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, "0");
+
+function updateCountdown() {
+
+    /* Birthday day: show zeros and the greeting all day */
+    if (isBirthdayToday()) {
+        ["days", "hours", "minutes", "seconds"].forEach(id => el(id).textContent = "00");
+        el("message").innerHTML = "🎉 Happy Birthday! 🎂❤️🎈";
+        return;
+    }
+
+    const difference = getNextBirthday().getTime() - Date.now();
+
+    el("days").textContent = pad(Math.floor(difference / (1000 * 60 * 60 * 24)));
+    el("hours").textContent = pad(Math.floor((difference / (1000 * 60 * 60)) % 24));
+    el("minutes").textContent = pad(Math.floor((difference / (1000 * 60)) % 60));
+    el("seconds").textContent = pad(Math.floor((difference / 1000) % 60));
+    el("message").textContent = "Counting every second until your birthday... 🎀";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
